@@ -1,0 +1,58 @@
+.FocusMove {
+    position: relative;
+    top: 300%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../imgs/WaterFall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.FocusMove .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../imgs/WaterFall.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.FocusMove .box:nth-child(1) {
+    filter: blur(10px);
+}
+
+.FocusMove .box:nth-child(2) {
+    clip-path: circle(150px at var(--x) var(--y));
+}
+
+.FocusMove .box h2 {
+    color: white;
+    font-size: 10em;
+    transform: translate(0, 0);
+    transform: translate(calc(var(--x)/25), calc(var(--y)/25));
+}
+
+.FocusMove .circle {
+    position: absolute;
+    top: -150px;
+    left: -150px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    transform: translate(var(--x), var(--y));
+}

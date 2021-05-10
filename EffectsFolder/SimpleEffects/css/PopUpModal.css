@@ -1,0 +1,110 @@
+.PopUpModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2196f3;
+    font-family: 'Poppins', sans-serif;
+}
+
+.PopUpModal .btn {
+    position: relative;
+    padding: 15px 20px;
+    background: #fff;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #03a9f4;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.PopUpModal .btn:hover {
+    letter-spacing: 4px;
+}
+
+.PopUpModal #popup {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: #fff;
+    width: 450px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.PopUpModal #popup.active {
+    visibility: visible;
+    top: 450%;
+}
+
+.PopUpModal #popup .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.PopUpModal #popup .content img {
+    max-width: 80px;
+}
+
+.PopUpModal #popup .content h2 {
+    font-size: 24px;
+    font-weight: 500;
+    columns: #333;
+    margin: 20px 0 10px;
+}
+
+.PopUpModal #popup .content p {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.PopUpModal #popup .content .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PopUpModal #popup .content .inputBox input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    outline: none;
+    font-size: 18px;
+}
+
+.PopUpModal #popup .content .inputBox input[type="submit"] {
+    max-width: 150px;
+    background: #03a9f4;
+    color: white;
+    border: none;
+}
+
+.PopUpModal #popup .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.PopUpModal #popup .close img {
+    width: 24px;
+    height: 24px;
+}
+

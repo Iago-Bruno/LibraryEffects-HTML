@@ -1,0 +1,191 @@
+.bodyProductCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #131313;
+}
+
+.bodyProductCard .productCardContainer {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.bodyProductCard .productCardContainer .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bodyProductCard .productCardContainer .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.bodyProductCard .productCardContainer .card:hover::before {
+    clip-path: circle(300px at 80% -20%);
+
+}
+
+.bodyProductCard .productCardContainer .card::after {
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.bodyProductCard .productCardContainer .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.bodyProductCard .productCardContainer .card .imgBx img {
+    position: absolute;
+    top: 15%;
+    transform: scale(-1, 1) rotate(25deg);
+    width: 270px;
+    height: 147px;
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+.bodyProductCard .productCardContainer .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+
+}
+
+.bodyProductCard .productCardContainer .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.bodyProductCard .productCardContainer .card:hover .contentBx {
+    height: 210px;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .size,
+.bodyProductCard .productCardContainer .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.bodyProductCard .productCardContainer .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.bodyProductCard .productCardContainer .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.7s;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .size h3,
+.bodyProductCard .productCardContainer .card .contentBx .color h3 {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: white;
+    margin: 0 5px;
+    transition: 0.4s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}  
+
+.bodyProductCard .productCardContainer .card .contentBx .size span:hover {
+    background: #9bdc28;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .color span:nth-child(1) {
+    background: #9bdc28;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .color span:nth-child(2) {
+    background: #03a9f4;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx .color span:nth-child(3) {
+    background: #e91e63;
+}
+
+.bodyProductCard .productCardContainer .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.bodyProductCard .productCardContainer .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.50s;
+}

@@ -1,0 +1,73 @@
+.bodyStickyBar {
+    background: #000;
+    min-height: 200vh;
+}
+
+.stickyBar {
+    display: none;
+    font-family: 'Poppins';
+    width: 100%;
+}
+
+.stickyBar header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10;
+}
+
+.stickyBar header.sticky {
+    padding: 5px 100px;
+    background: white;
+}
+
+.stickyBar header .logo {
+    position: relative;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+.stickyBar header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stickyBar header ul li {
+    position: relative;
+    list-style: none;
+}
+
+.stickyBar header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+.stickyBar .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+}
+
+.stickyBar header.sticky .logo,
+.stickyBar header.sticky ul li a {
+    color: black;
+}

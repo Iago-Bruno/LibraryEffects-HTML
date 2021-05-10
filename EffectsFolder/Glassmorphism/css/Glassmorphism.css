@@ -1,0 +1,256 @@
+#glassWebSite {
+    font-family: 'Popins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background: url('../imgs/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#glassWebSite .glassContainer {
+    position: relative;
+    width: calc(100% - 100px);
+    min-height: calc(100vh - 280px);
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+#glassWebSite .glassContainer header {
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    right: 20px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#glassWebSite .glassContainer header .logo {
+    color: #8a2435;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+#glassWebSite .glassContainer header ul {
+    display: flex;
+}
+
+#glassWebSite .glassContainer header ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+#glassWebSite .glassContainer header ul li a {
+    font-weight: 500;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #8a2435;
+    border-radius: 25px;
+}
+
+#glassWebSite .glassContainer header ul li a:hover, 
+#glassWebSite .glassContainer header ul li a.active {
+    background: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#glassWebSite .glassContainer .content {
+    transform: translateX(-100px);
+    max-width: 700px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    padding-left: 110px;
+}
+
+#glassWebSite .glassContainer .content h2 {
+    font-size: 3em;
+    color: #8a2435;
+    margin-bottom: 10px;
+}
+
+#glassWebSite .glassContainer .content p {
+    font-size: 1.2em;
+    color: #8a2435;
+}
+
+#glassWebSite .glassContainer .content a {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: #8a2435;
+    margin-top: 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#glassWebSite .glassContainer .imgBx img {
+    max-width: 340px;
+    animation: animate 3s linear infinite;
+    margin-right: 20px;
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(50px);
+    }
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+#glassWebSite .glassContainer .sci {
+    position: absolute;
+    right: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#glassWebSite .glassContainer .sci li {
+    list-style: none;
+}
+
+#glassWebSite .glassContainer .sci li a {
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 5px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#glassWebSite .glassContainer .sci li a img {
+    transform: scale(0.6);
+    transition: 0.5s;
+}
+
+#glassWebSite .glassContainer .sci li:hover a img {
+    transform: scale(0.6) rotate(360deg);
+}
+
+#glassWebSite .glassContainer .copyrightText {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: #8a2435;
+}
+
+@media(max-width: 1200px) {
+    #glassWebSite .glassContainer {
+        position: relative;
+        width: calc(100% - 20px);
+    }
+}
+
+@media(max-width: 992px) {
+    #glassWebSite {
+        padding: 50px 10px 10px;
+    }
+    #glassWebSite .glassContainer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    #glassWebSite .glassContainer .content {
+        transform: translateX(0px);
+        max-width: 100%;
+        padding: 30px;
+        margin-top: 40px;
+    }
+    #glassWebSite .glassContainer .content a {
+        font-size: 1em;
+        padding: 10px 20px;   
+    }
+    #glassWebSite .glassContainer header {
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        top: -60px;
+        padding: 20px;
+        right: 0;
+        left: 0;
+    }
+    #glassWebSite .glassContainer header ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #glassWebSite .glassContainer header ul li {
+        margin: 2px;
+    }
+    #glassWebSite .glassContainer header ul li a {
+        display: inline-block;
+    }
+    
+    #glassWebSite .glassContainer .imgBx {
+        margin-bottom: 50px;
+    }
+    #glassWebSite .glassContainer .sci {
+        position: relative;
+        flex-direction: row;
+    }
+    #glassWebSite .glassContainer .sci li a {
+        margin: 0 10px;
+    }
+    #glassWebSite .glassContainer .copyrightText {
+        position: relative;
+        bottom: initial;
+        left: inherit;
+        width: 100%;
+        color: #8a2435;
+        text-align: center;
+        margin: 20px 0 0 24px;
+    }
+    @keyframes animate {
+        0%, 100% {
+            transform: translateY(-20px);
+        }
+        50% {
+            transform: translateY(20px);
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    #glassWebSite .glassContainer .content h2 {
+        font-size: 1.5em;
+    }
+    #glassWebSite .glassContainer .content p {
+        font-size: 1em;
+    }
+    #glassWebSite .glassContainer .imgBx img {
+        max-width: 260px;
+    }
+}

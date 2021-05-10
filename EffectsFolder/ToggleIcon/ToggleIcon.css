@@ -1,0 +1,62 @@
+#toggleicon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 6px;
+    width: 50px;
+    height: 50px;
+    background: #37a6ff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+    z-index: 100;
+}
+
+#toggleicon:hover {
+    background: #f7226a;
+}
+
+#toggleicon::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+
+    transition: 0.2s;
+    transform: translateY(-10px);
+
+    box-shadow: 0 10px 0 #fff;
+}
+
+#toggleicon::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+
+    transition: 0.2s;
+    transform: translateY(10px);
+}
+
+#toggleicon.active {
+    background: #f7226a;
+}
+
+#toggleicon.active:hover {
+    background: #37a6ff;
+}
+
+#toggleicon.active::before{
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+}
+
+#toggleicon.active::after {
+    transform: translateY(0) rotate(-45deg);
+}
